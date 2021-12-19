@@ -12,6 +12,11 @@ ConfigManager is a simple configuration file manager that can help you to read a
 - While updating a config_file, a new file is created and then renamed to the original file's name. So even if updating the configuration file is not successful, the orginal file is preserved.
 - Supports Comments in the configuration file.
 
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This is an open-source project and welcomes contributions. Note that this project is licensed under the MIT license, and all contributions should follow this license. For more info look at [LICENSE File](LICENSE) .
+
 ## Before you start
 
 - Please do note that you need to create a directory named **config** on your micropython device [or pc] and save all your configuration files there so that configmgr can access it. This is done to keep all the files in one place. 
