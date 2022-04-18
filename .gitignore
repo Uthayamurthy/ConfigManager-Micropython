@@ -23,6 +23,9 @@ var/
 # Reference Files
 for_ref/
 
+# VS Code Dir
+.vscode/
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
