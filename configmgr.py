@@ -10,7 +10,7 @@ class ConfigFile:
     def read(self):
         configfile = open(self.filename)
         sectionre = re.compile('\[(.*)\]')
-        entryre = re.compile('(.*)=(.*)')
+        entryre = re.compile('(.*?)=(.*)')
         stringre = re.compile('"(.*)"')
         intre = re.compile('[0-9]*')
         commentre = re.compile('^#.*')
