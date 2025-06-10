@@ -33,7 +33,9 @@ class ConfigFile:
                         entry_val = entry_val[1:].split(',')
                         entry_val = [a.strip() for a in entry_val]
                 elif intre.search(entry_val):
-                    entry_val = int(intre.search(entry_val.strip()).group(0))
+                    matched_val = intre.search(entry_val.strip()).group(0)
+                    if matched_val:
+                        entry_val = int(matched_val)
                 self.config[current_section][entry.group(1).strip()] = entry_val
         configfile.close()
 
@@ -53,8 +55,8 @@ class ConfigFile:
             configfile.write('\n\n')
         configfile.close()
         import os
-        os.remove('{}.{}'.format(filename[0], filename[1]))
         os.rename('{}_new.{}'.format(filename[0], filename[1]), '{}.{}'.format(filename[0], filename[1])) 
+        os.remove('{}.{}'.format(filename[0], filename[1]))
 
     def set_section(self, section):
         self.sections.append(section)
