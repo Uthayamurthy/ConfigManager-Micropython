@@ -56,7 +56,6 @@ class ConfigFile:
         configfile.close()
         import os
         os.rename('{}_new.{}'.format(filename[0], filename[1]), '{}.{}'.format(filename[0], filename[1])) 
-        os.remove('{}.{}'.format(filename[0], filename[1]))
 
     def set_section(self, section):
         self.sections.append(section)
